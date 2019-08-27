@@ -1,0 +1,7 @@
+<div class="card mt-4" *ngIf="this.fipeService.carInfoCharged">
+    <div class="card-body">
+        <h3 class="card-title">{{ info.model }} <small>{{ info.brand }}</small></h3>
+        <p class="card-text">Ano: {{ info.year }} <br>Combustível: {{ info.fuel }} <br>Código FIPE: {{ info.fipeId }}</p>
+        <h5 class="card-text">{{ info.value }} <small>Ref:{{ info.monthRef }}</small></h5>
+    </div>
+</div>

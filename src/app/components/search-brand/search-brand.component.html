@@ -1,0 +1,5 @@
+<label>Selecione a marca</label>
+<select class="form-control" (change)="changeBrand($event.target.value)">
+    <option value="">Selecione</option>
+    <option [value]="brand.id" *ngFor="let brand of brands" >{{ brand.name }}</option>
+</select>

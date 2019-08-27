@@ -1,0 +1,6 @@
+<label>Selecione o modelo</label>
+<select class="form-control" (change)="changeModel($event.target.value)" [disabled]="!this.fipeService.modelCharged">
+    <option *ngIf="this.fipeService.modelCharged" value="">Selecione</option>
+    <option *ngIf="!this.fipeService.modelCharged" value="">...</option>
+    <option [value]="model.id" *ngFor="let model of models" >{{ model.name }}</option>
+</select>

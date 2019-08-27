@@ -1,0 +1,6 @@
+<label>Selecione o ano</label>
+<select class="form-control" (change)="changeYear($event.target.value)" [disabled]="!this.fipeService.yearCharged">
+    <option *ngIf="this.fipeService.yearCharged" value="">Selecione</option>
+    <option *ngIf="!this.fipeService.yearCharged" value="">...</option>
+    <option [value]="year.id" *ngFor="let year of years" >{{ year.name }}</option>
+</select>
