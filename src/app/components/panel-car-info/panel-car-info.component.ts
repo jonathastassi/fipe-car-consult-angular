@@ -9,10 +9,10 @@ import { CarInfo } from 'src/app/models/car-info';
 })
 export class PanelCarInfoComponent implements OnInit {
 
-  private info: CarInfo;
+  public info: CarInfo;
 
   constructor(
-    private fipeService: FipeService
+    public fipeService: FipeService
   ) { }
 
   ngOnInit() {

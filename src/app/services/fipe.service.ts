@@ -95,7 +95,7 @@ export class FipeService {
     this.carInfoCharged = false;
 
     if (this.yearId.value == 0) {
-      return of([]);
+      return of(null);
     }
 
     return this.http.get<CarInfo>(`https://parallelum.com.br/fipe/api/v1/carros/marcas/${this.brandId.value}/modelos/${this.modelId.value}/anos/${this.yearId.value}`)

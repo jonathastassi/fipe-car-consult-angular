@@ -8,6 +8,8 @@ import { SearchBrandComponent } from './components/search-brand/search-brand.com
 import { SearchModelComponent } from './components/search-model/search-model.component';
 import { SearchYearComponent } from './components/search-year/search-year.component';
 import { PanelCarInfoComponent } from './components/panel-car-info/panel-car-info.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { PanelCarInfoComponent } from './components/panel-car-info/panel-car-inf
   imports: [
     NgbModule,
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

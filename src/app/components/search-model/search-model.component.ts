@@ -16,7 +16,7 @@ export class SearchModelComponent implements OnInit {
   models: Model[];
 
   constructor(
-    private fipeService: FipeService
+    public fipeService: FipeService
   ) { }
 
   changeModel(el): void {

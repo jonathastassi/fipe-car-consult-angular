@@ -12,7 +12,7 @@ export class SearchYearComponent implements OnInit {
   years: Year[];
 
   constructor(
-    private fipeService: FipeService
+    public fipeService: FipeService
   ) { }
 
   changeYear(el): void {
